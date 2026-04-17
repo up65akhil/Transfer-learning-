@@ -22,8 +22,8 @@ with st.sidebar:
 
 @st.cache_resource
 def load_model():
-    model_folder = "up65akhil/up65akhil-sentiment-model"
-    return pipeline("text-classification", model=model_folder, tokenizer=model_path)
+    model_path = "up65akhil/up65akhil-sentiment-model"
+    return pipeline("text-classification", model=model_path, tokenizer=model_path)
 
 try:
     sentiment_pipeline = load_model()
